@@ -1,0 +1,190 @@
+.home {
+    width: 100%;
+    height: 98vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(img/mdIconGray.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.home h1, .home h2 {
+    backdrop-filter: blur(7px);
+    drop-shadow: 3px 3px 5px #000000;
+}
+
+a.nav {
+    position: fixed;
+    background-color: rgba(255,255,255,.2);
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+}
+
+#arrow-up {
+    background-image: url(img/ArrowUp.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 30px;
+    padding-top: 20px;
+    width: 200px;
+    top: 15px;
+    left: calc(50% - 100px);
+}
+
+#arrow-down {
+    background-image: url(img/ArrowDown.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 30px;
+    padding-bottom: 20px;
+    width: 200px;
+    bottom: 15px;
+    left: calc(50% - 100px);
+}
+
+#arrow-right {
+    background-image: url(img/ArrowRight.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 30px;
+    height: 30px;
+    padding-right: 20px;
+    right: 15px;
+    top: calc(50% - 15px);
+}
+
+#arrow-left {
+    background-image: url(img/ArrowLeft.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    height: 30px;
+    padding-left: 20px;
+    left: 15px;
+    top: calc(50% - 15px);
+}
+h1 {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 5rem;
+    margin: 10px;
+}
+h2 {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 10px;
+}
+p {
+    padding: 10px;
+}
+.md-chart {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+   /* width: 100%;
+    max-width: 170vh;
+    margin-top: calc(50vh - 25vw);
+    margin-left: calc(50vw - 85vh); */
+}
+
+.md-chart svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#chart-overlay {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: stretch;
+    pointer-events: none;
+}
+
+#chart-overlay > div {
+    overflow: hidden;
+    background-color: rgba(230,230,230,.9);
+    margin: 30px;
+    justify-self: center;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+#chart-overlay .content, .close-btn {
+    pointer-events: all;
+}
+
+
+#chart-overlay div.content {
+    overflow: scroll;
+    max-height: 80%;
+}
+
+.aff-btns::hover, .vir-btns::hover {
+    cursor: pointer;
+    fill: #000000;
+}
+
+#chart-overlay .close-btn {
+    display: block;
+    float: right;
+    padding: 3px;
+    background-color: #333;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #cccccc;
+    border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#affordance-col, #virtue-col, #principle-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.affordance-content, .virtue-content, .principle-content {
+    overflow-y: scroll;
+    pointer-events: all;
+    max-height: 80vh;
+    text-align: left;
+}
+
+#principle-title {
+    text-transform: uppercase;
+}
