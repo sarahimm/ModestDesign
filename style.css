@@ -158,7 +158,8 @@ h4{
     font-size: 20px;
     color: #777777;
 }
-p {
+p, li, label {
+    font-family: "Poppins",sans-serif;
     padding: 10px;
 }
 
@@ -277,6 +278,15 @@ p {
     max-height: 80vh;
     text-align: left;
     overflow-x: visible;
+}
+
+.affordance-content h3 {
+    text-transform: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px;
+    margin-bottom: 30px;
+    
 }
 
 #principle-title {
