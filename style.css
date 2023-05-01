@@ -257,6 +257,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow-x: visible;
 }
 
 .affordance-content, .virtue-content, .principle-content {
@@ -264,15 +265,45 @@ p {
     pointer-events: all;
     max-height: 80vh;
     text-align: left;
+    overflow-x: visible;
 }
 
 #principle-title {
     text-transform: uppercase;
 }
 
+.info.icon {
+    position: relative;
+    overflow: visible;
+    pointer-events: all;
+}
+
+.info.icon::after {
+    content: "The four affordances are taken from the work of digital media scholar Janet Murray. Together, they describe the unique qualities and experience of digital media, as well as the areas where it has the most potential for growth. Here, they're being used as a broad list of considerations for what  software is doing, so that we can evaluate whether it is doing those things well.";
+    position: absolute;
+    overflow: visible;
+    top: 30px;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 3px 10px #cccccc;
+    padding: 10px;
+    visibility: hidden;
+}
+
+#virtue-col .info.icon::after {
+    content: "Why these four virtues? UX is centered around the idea that software affects people. Modest Design layers that idea with a moral claim: good software must be good for the user; i.e. it must provide them some value without being detrimental to their wellbeing. There is a fine line between influence and manipulation, and we  must actively push back against manipulative design patterns if we want to produce software objects that truly help their users. These virtues don't dictate the kind of help your software will provide, but they do help you evaluate the quality of that help.";
+}
+.info.icon:hover::after {
+    display: block;
+    visibility: visible;
+}
+
 
 /* ABOUT PAGE */
-
+.about h1 {
+    font-size: 36px;
+    font-weight: 300;
+}
 .about-card {
     display: flex;
     max-width: 1200px;
@@ -326,6 +357,7 @@ p {
 
 .about-heading h2 {
     font-size: 28px;
+    font-weight: 300;
 }
 
 .about-heading h2, .about-heading h3 {
@@ -352,4 +384,66 @@ p {
 
 .about-heading.active h3 {
     color: #dddddd;
+}
+
+/**** CHECKLIST ****/
+
+body {
+    margin: 0;
+}
+
+main.checklist {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.checklist .questionnaire {
+    padding: 45px;
+    max-width: 900px;
+}
+.checklist .col {
+    position: sticky;
+    flex-grow: 0;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    padding-top: 45px;
+    width: 600px;
+    text-align: center;
+    background-color: #eeeeee;
+    height: 100vh;
+}
+
+.checklist h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.checklist h4 {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.checklist p, .checklist label {
+    font-family: "Poppins", sans-serif;
+    color: #777777;
+}
+
+.checklist input {
+    margin-left: calc(50% - 8px);
+}
+
+.checklist .options {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.checklist label {
+    width: 20%;
+    display: block;
+    text-align: center;
+
 }
